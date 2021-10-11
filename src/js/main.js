@@ -26,7 +26,7 @@ function onStart() {
     }
     isActive = true
     intervalId = setInterval(() => {
-        const randomColor = randomIntegerFromInterval(0, colors.length);
+        const randomColor = randomIntegerFromInterval(0, colors.length-1);
         body.style.background = colors[randomColor];
         console.log('1 сек')
     }, 1000);
@@ -37,30 +37,3 @@ function onStop() {
     isActive = false
 }
 
-
-
-
-// const Colorswitcher = {
-//     intervalId: null,
-//     isActive: false,
-    
-//     onStart() {
-//             if(this.isActive) {
-//                 return
-//             }
-//         this.isActive = true
-//         this.intervalId = setInterval(() => {
-//             const randomColor = randomIntegerFromInterval(0, colors.length);
-//             body.style.background = colors[randomColor];
-//             console.log('1 сек')
-//         }, 1000);
-//     },
-    
-//     onStop() {
-//         clearInterval(this.intervalId);
-//         this.isActive = false
-//     }
-// };
-
-// startBtn.addEventListener('click', Colorswitcher.onStart);
-// stopBtn.addEventListener('click', Colorswitcher.onStop);
